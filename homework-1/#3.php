@@ -6,7 +6,7 @@ if (defined('COUNT')) {
 }
 echo '<br>';
 
-define('CON', '40');
+define('COUNT', '40');
 if (COUNT==30) {
     echo "Значение константы изменить не удалось, оно по прежнему равно ".COUNT;
 } else {
