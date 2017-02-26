@@ -1,5 +1,5 @@
 <?php
-$str = "one two three";
+$str = "one two three"; // кавычки
 echo $str.'<br>';
 
 $arr = explode(" ", $str);
@@ -10,8 +10,9 @@ echo '<br>';
 $count = count($arr);
 $reversed = array_reverse($arr);
 $i = 0;
-while ($i< $count) {
-    $str2 .= $reversed[$i].",";
+
+while ($i < $count) {
+    $str2 .= $reversed[$i] . ",";
     $i++;
 }
-echo rtrim($str2, ",");
+echo rtrim($str2, ',');
