@@ -9,8 +9,9 @@
 </head>
 <body>
         <?php
-        $bmw = ['model'=>'X5', 'speed'=>120, 'doors'=>5, 'year'=>2000];
-        $toyota = ['model'=>'M25', 'speed'=>140, 'doors'=>4, 'year'=>2010];
+        $bmw = ['model'=>'X5', 'speed'=>120, 'doors'=>5, 'year'=>2000]; // старайся между ключами и значениями ставить пробел
+        // иначе не читается 
+        $toyota = ['model' => 'M25', 'speed' => 140, 'doors' => 4, 'year' => 2010];
         $opel = ['model'=>'A50', 'speed'=>160, 'doors'=>2, 'year'=>2015];
 
         $cars = ['bmw'=> $bmw,'toyota'=> $toyota,'opel'=> $opel];
