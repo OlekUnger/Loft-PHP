@@ -8,6 +8,7 @@ function calculate()
     }
     $array = func_get_args();
     $operator = array_shift($array);
+
     foreach ($array as $key => $value) {
         $stringElem = $value . $operator;
         $arrElem[$key] = $stringElem;

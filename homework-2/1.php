@@ -1,5 +1,5 @@
 <?php
-
+// тут необходимо исправить так второй параметр он может остутсвовать
 function get_param($arg1, $arg2)
 {
     if (is_array($arg1)) {
@@ -15,4 +15,4 @@ function get_param($arg1, $arg2)
         echo 'В первом параметре должен быть массив!';
     }
 }
-echo get_param(['One-', 'Two-', 'Three!'], true);
+echo get_param(['One-', 'Two-', 'Three!'], false);

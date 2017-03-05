@@ -32,3 +32,4 @@ function calculate($array, $operator)
     return $result;
 }
 echo calculate([700, 5, 2, 7 ], '/');
+// если введен не корректный симол то $result undefined variable
