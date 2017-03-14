@@ -48,7 +48,7 @@ function menu()
 
 function clearInput($param)
 {
-    return nl2br(preg_replace('/[_\W\d]/','',($param)));
+    return preg_replace('/[<>]/','',($param));
 }
 
 function message($class, $text, $url)
