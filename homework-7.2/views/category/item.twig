@@ -1,0 +1,36 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+<div class="container aside">
+
+    <aside>
+
+        <ul class="categories">
+            {% for category in category_list %}
+            <li><a href="/category/{{ category.id }}">{{ category.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </aside>
+    <main class='{{ main }}'>
+        <h1 style="text-align: center">{{ category.name }}</h1>
+        <ul class="products">
+            {% for product in products %}
+                <a class="product_link" href="/goods/{{ product.id }}">
+                    <li>
+                        <div class="product_img">
+                            <img src="" alt="">
+                        </div>
+                        <h4 class="product_name" style="margin:0">{{ product.name }}</h4>
+                        <div class="product_description">
+                            {{ product.description }}
+                        </div>
+                        <div class="product_price">Цена: {{ product.price }} руб.</div>
+                        <span class="product_category">Категория {{ product.category_id }}</span>
+                    </li>
+                </a>
+            {% endfor %}
+        </ul>
+    </main>
+</div>
+
+{% endblock %}

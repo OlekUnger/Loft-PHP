@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='../template/style.css'>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <title>{{ title }}</title>
+</head>
+<body>
+
+<div class="wrapper">
+    <header>
+        <div class='container header'>
+
+            {% set menu=[
+            {name: 'Главная', url: '/',class:'left',class2:''},
+            {name: 'Товары', url:'/goods',class:'right',class2:''},
+            ] %}
+
+            <ul class='clearfix'>
+
+                {% for menu_item in menu %}
+                    <li class="{{ menu_item.class }} ">
+                        <a {% if activePage == menu_item.url %} class="active"{% else %} class="{{ menu_item.class2 }}"{% endif %}
+                                href='{{ menu_item.url }}'>{{ menu_item.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+
+</div>
+<footer></footer>
+
+</body>
+</html>

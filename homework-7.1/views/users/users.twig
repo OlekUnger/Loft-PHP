@@ -1,0 +1,29 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+
+        <h1>Запретная зона, доступ только авторизированному пользователю</h1>
+        <h2>Информация выводится из базы данных</h2>
+
+        <table class="table table-bordered">
+        {% set table=['Имя', 'Возраст', 'Описание', 'Фотография'] %}
+
+        {% for item in table %}
+            <th>{{ item }}</th>
+        {% endfor %}
+        {% for user in userslist %}
+            <tr>
+                <td>{{ user.name }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.description }}</td>
+                <td>
+                    <div class='user_photo'><img src="/template/Photos/{{ user.foto }}"></div>
+                </td>
+                <td><a class='delete-user' href='/users/{{ user.id }}'>Посмотреть</a></td>
+            </tr>
+        {% endfor %}
+        </table>
+
+{% endblock %}
+
+

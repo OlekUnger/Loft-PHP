@@ -1,0 +1,21 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+
+    <div class="container aside">
+
+        <aside>
+
+            <ul class="categories">
+                {% for category in category_list %}
+                    <li><a href="/category/{{ category.id }}">{{ category.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </aside>
+        <main class='{{ main }}'>
+            <h1 style="text-align: center">{{ product.name }}</h1>
+           <div style="width:80%; height:100%;border:1px solid gray;margin:auto"></div>
+        </main>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,8 @@
+{
+    "require": {
+        "twig/twig":"^2.2",
+        "illuminate/database": "^5.4",
+        "fzaninotto/faker": "^1.6"
+
+    }
+}

@@ -1,0 +1,391 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #ccc;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: darkslategray;
+
+}
+
+aside{
+    width: 20%;
+    height: 100%;
+    padding:10px;
+    /*border:1px solid darkslategray;*/
+
+}
+.categories{
+    display: flex;
+    flex-direction: column;
+}
+.categories a{
+    background-color: darkslategray;
+    box-shadow: inset 0 -2px 0 #213B3B
+}
+.main {
+    min-height: 700px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+main.userlist {
+    min-height:700px;
+    width: 80%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+}
+
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    height:auto!important;
+    padding-bottom:100px;
+    /*overflow: hidden;*/
+}
+.wrapper::after{
+    position: absolute;
+
+    content:"";
+    height:100px;
+    display: block;
+}
+footer {
+    width: 100%;
+    height: 100px;
+    margin-top: -100px;
+    background-color: darkslategray;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.container.header{
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.container.aside{
+    margin: 20px auto 20px auto;
+}
+
+.logo {
+    float: left;
+    height: 100%;
+}
+
+ul {
+    width: 100%;
+    float: right;
+    list-style-type: none;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    font-size: 18px;
+    text-transform: lowercase;
+    color: #fff;
+}
+
+a:not(.product_link) {
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 40px;
+    padding: 0 20px;
+
+}
+
+a.active:not(.product_link), a:hover:not(.user):not(.product_link) {
+    color: papayawhip;
+}
+.active{
+    color: papayawhip;
+}
+
+.clearfix {
+    content: "";
+    display: table;
+}
+
+.clearfix::after,
+.clearfix::before {
+    clear: both;
+}
+
+form {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-right: 6px;
+    background-color: papayawhip;
+}
+.form{
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-right: 6px;
+    background-color: papayawhip;
+    float:left
+}
+
+input {
+    width: 100%;
+    display: block;
+    padding: 5px;
+}
+
+
+
+textarea {
+    display: block;
+    width: 100%;
+    resize: none;
+}
+
+.bottom {
+    width: 100%;
+}
+
+.right {
+    float: right
+}
+
+.left {
+    float: left;
+}
+
+.error, .success {
+    position: absolute;
+    padding: 10px;
+    width: 100%;
+    color: #fff;
+    bottom: 100%;
+    left: 0;
+}
+
+.error {
+    background-color: red;
+}
+
+.success {
+    background-color: green;
+}
+
+.user {
+    display: block;
+    font-size: 24px;
+    text-transform: none;
+    color: cadetblue;
+    cursor: default;
+    line-height: 40px;
+    padding: 0 20px;
+    position: relative;
+}
+.user .ava{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: -35px;
+    border: 1px solid #fff;
+    overflow: hidden;
+}
+.ava img{
+    width: 130%;
+    height: auto;
+    display: block;
+}
+
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.form-container {
+    margin-top: 25%;
+    width: 100%;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.form-horizontal {
+    width: 35%;
+}
+.list{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+table {
+    width: 70%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+td, th {
+    padding: 0
+}
+
+.th {
+    text-align: left;
+}
+
+.table {
+    width: 70%;
+    max-width: 100%;
+    margin-bottom: 20px
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd
+}
+
+.table-bordered {
+    border: 1px solid darkslategray
+}
+
+.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+    border: 1px solid darkslategray;
+}
+
+.table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+    border-bottom-width: 2px
+}
+
+.delete-user {
+    color: darkred;
+}
+
+a.delete-user:hover {
+    color: red;
+}
+
+.user_photo {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.user_file{
+    width: 200px;
+    /*height: 300px;*/
+    background-color: #ccc;
+
+}
+.user_file img{
+    width: 120%;
+    height: auto;
+    background-color: #ccc;
+
+}
+
+h2{
+    margin-bottom: 40px;
+}
+
+.products{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.products li{
+    width: 250px;
+    height: 300px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+.product_img{
+    width: 100%;
+    height: 150px;
+    border: 1px solid #ccc;
+}
+.product_table{
+
+    /*margin-left:50px;*/
+    /*margin-right: 50px;*/
+    /*float:right;*/
+}
+.product_price{
+    color: darkred;
+}
+.product_name{
+    text-transform: capitalize;
+    color: black;
+}
+.product_link{
+    text-decoration: none;
+}
+.product_link .product_description{
+    color: #213B3B;
+}
+.product_category{
+    color: black;
+    font-size:10px;
+}

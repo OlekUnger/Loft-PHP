@@ -1,0 +1,33 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+
+    <h1>Файлы пользователя {{ userItem.name }}</h1>
+    <div class="user_file"><img src='/template/Photos/{{ userItem.foto }}'></div>
+    {% if userPosts %}
+    <table class="table table-bordered" style="margin-top:50px;">
+
+        {% set table=['id сатьи','Заголовок', 'Текст','Картинка', 'Действие', 'Действие'] %}
+
+        {% for item in table %}
+            <th>{{ item }}</th>
+        {% endfor %}
+
+        {% for post in userPosts %}
+            <tr>
+                <td>{{ post.id }}</td>
+                <td>{{ post.title }}</td>
+                <td>{{ post.text }}</td>
+                <td><div class='user_photo'><img src="/template/Pics/{{ post.picture }}"></div></td>
+                <td><a class='delete-user' href='/profile/{{ post.id }}'>Редактировать</a></td>
+                <td><a class='delete-user' href="/users/{{ post.user_id }}?delete={{ post.id }}">Удалить</a></td>
+            </tr>
+        {% endfor %}
+        {% else %}
+        <h2>У этого пользователя нет статей</h2>
+        {% endif %}
+    </table>
+
+{% endblock %}
+
+

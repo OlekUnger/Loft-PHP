@@ -1,0 +1,25 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+    <form method='POST' name='p_form' action='#' enctype='multipart/form-data'>
+        {% if success2 %}
+            <div class='success'>{{ success2 }}</div>
+        {% endif %}
+        {% if error2 %}
+            <div class='error'>{{ error2 }}</div>
+        {% endif %}
+        <p>Заголовок статьи:<br/>
+            <input type='text' name='editTitle' placeholder='Заголовок' value="{{ postItem.title }}"/>
+        </p>
+        <p>Текст статьи:<br/>
+            <textarea type='text' name='editText' rows='5' placeholder='Текст'>{{ postItem.text }}</textarea>
+        </p>
+        <div class="clearfix">
+            <p class='left'>Фото:<br/>
+                <input class='left' type='file' name='pic'>
+            </p>
+        </div>
+
+        <button type='submit' name='editPost' value='вход'>Отправить</button>
+    </form>
+{% endblock %}

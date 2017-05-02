@@ -1,0 +1,64 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+    <div style="margin:50px">
+        <h2>Редактировать данные</h2>
+        <form method='POST' name='l_form' action='#' enctype='multipart/form-data'>
+
+            {% if success %}
+                <div class='success'>{{ success }}</div>
+            {% endif %}
+            {% if error %}
+                <div class='error'>{{ error }}</div>
+            {% endif %}
+            <p>Имя:<br/>
+                <input type='text' name='name' placeholder='Имя' value="{{ name }}"/>
+            </p>
+
+            <p>О себе:<br/>
+                <textarea type='text' name='description' id='' rows='5'
+                          placeholder='О себе'>{{ description }}</textarea>
+            </p>
+            <div class='bottom  clearfix'>
+                <p class='left'>Фото:<br/>
+                    <input class='left' type='file' name='photo'>
+                </p>
+                <p class='right'>Возраст:<br/>
+                    <select name='age' size='1'>
+                        <option value='{{ age }}'>{{ age }}</option>
+                        <option value='-'>-</option>
+                        {% for i in 10..100 %}
+                            <option value={{ i }}>{{ i }}</option>
+                        {% endfor %}
+                    </select>
+
+                </p>
+            </div>
+            <button type='submit' name='send' value='вход'>Отправить</button>
+            <button type='reset'>Очистить</button>
+        </form>
+    </div>
+    <div style="margin:50px">
+        <h2>Написать статью</h2>
+        <form method='POST' name='p_form' action='#' enctype='multipart/form-data'>
+            {% if success2 %}
+                <div class='success'>{{ success2 }}</div>
+            {% endif %}
+            {% if error2 %}
+                <div class='error'>{{ error2 }}</div>
+            {% endif %}
+            <p>Заголовок статьи:<br/>
+                <input type='text' name='sendTitle' placeholder='Заголовок' value="{{ sendTitle }}"/>
+            </p>
+            <p>Текст статьи:<br/>
+                <textarea type='text' name='sendText' rows='5' placeholder='Текст'>{{ sendText }}</textarea>
+            </p>
+            <div class='bottom  clearfix'>
+                <p class='left'>Фото:<br/>
+                    <input class='left' type='file' name='pic'>
+                </p>
+            </div>
+            <button type='submit' name='sendPost' value='вход'>Отправить</button>
+        </form>
+    </div>
+{% endblock %}
