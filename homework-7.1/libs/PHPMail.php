@@ -13,7 +13,7 @@ class PHPMail
         $mail->Host = 'smtp.mail.ru';                         // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
         $mail->Username = 'oleg.unger@mail.ru';                             // SMTP username
-        $mail->Password = 'jX12abQ6';                         // SMTP password
+        $mail->Password = '00000';                         // SMTP password
         $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
         $mail->Port = 465;                                    // TCP port to connect to
         $mail->setLanguage('ru');
